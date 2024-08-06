@@ -82,7 +82,7 @@ class NestedUNet(nn.Module):
         return x
 
 if __name__ == "__main__":
-    x = torch.randn((2, 3, 1087, 456))  
+    x = torch.randn((2, 3, 1087, 456))  # Reduced batch size
     model = NestedUNet()
     output = model(x)
     print(output.shape)
